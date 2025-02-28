@@ -115,7 +115,13 @@ function CreateTrip() {
       <div className='mt-20 flex flex-col gap-10'>
         <div>
           <h2 className='text-xl my-3 font-medium'>What is destination of choice?</h2>
-          <Input type="text" onChange={(v) => handleInputChange('location', v.target.value) }/>
+          <GooglePlacesAutocomplete
+            apiKey={import.meta.env.VITE_GOOGLE_PLACE_API_KEY}
+            selectProps={{
+              place,
+              onChange: (v) => { setPlace(v); handleInputChange('location', v) }
+            }}
+          />
         </div>
         <div>
           <h2 className='text-xl my-3 font-medium'>How many days are you planning your trip?</h2>
