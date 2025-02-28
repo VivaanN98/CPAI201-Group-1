@@ -55,6 +55,10 @@ function Header() {
       <div>
         {user ?
           <div className='flex items-center gap-3'>
+            <a href='/games/flip-a-card'>
+            <Button variant="outline" 
+            className="rounded-full">Play Games</Button>
+            </a>
             <a href='/create-trip'>
             <Button variant="outline" 
             className="rounded-full">+ Create Trip</Button>
@@ -68,11 +72,13 @@ function Header() {
             <img src={user?.picture} className='h-[35px] w-[35px] rounded-full'/>
             </PopoverTrigger>
             <PopoverContent>
-              <h2 className='cursor-pointer' onClick={()=>{
+              <h2 className='cursor-pointer p-2 hover:bg-[whitesmoke] border-b rounded-s' onClick={()=>{
                 googleLogout();
                 localStorage.clear();
                 window.location.reload();
               }}>Logout</h2>
+
+              <h2 className='cursor-pointer p-2 hover:bg-[whitesmoke] border-b rounded-s'>Rewards</h2>
             </PopoverContent>
           </Popover>
           </div>
