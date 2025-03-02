@@ -3,6 +3,7 @@ import cardsData from './data/cards.json'; // Import the JSON file directly
 import './game.css'; // Importing custom styles for the game
 import DigitalTimer from './digital-timer';
 import { useNavigate } from 'react-router-dom';
+import Confetti from 'react-confetti';
 
 const FlipCardGame = () => {
     const gridContainer = useRef(null); // React ref for the grid container
@@ -16,6 +17,11 @@ const FlipCardGame = () => {
     const [timerRunning, setTimerRunning]=useState(false)
     const [resetTimer, setResetTimer]=useState(false)
     const navigate = useNavigate()
+    const [showConfetti, setShowConfetti] = useState(false);
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
 
     useEffect(()=>{
         if(difficulty==="easy"){
@@ -142,8 +148,45 @@ const FlipCardGame = () => {
         navigate('/rewards')
     }
 
+    useEffect(() => {
+        // winning logic
+        if (score === cards.length / 2 && cards.length > 0) {
+            setShowConfetti(true); // Start confetti
+            const timeLeft = timer;
+            const res = confirm(`Congratulations! You've won! You matched all pairs with a score of ${score}. Would you like to proceed to rewards?`);
+            if (res) {
+                navigate('/rewards');
+            }
+            // Stop confetti after 5 seconds
+            setTimeout(() => {
+                setShowConfetti(false);
+            }, 5000);
+        }
+    }, [score, cards.length]);
+
+    // Add window resize handler
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <div className="flex flex-col items-center py-10 bg-blue-950 ">
+            {showConfetti && (
+                <Confetti
+                    width={windowSize.width}
+                    height={windowSize.height}
+                    recycle={false}
+                    numberOfPieces={500}
+                />
+            )}
             <div className=" w-full max-w-7xl flex justify-between items-center">
                 <div className="flex w-full justify-center items-center gap-5">
                     <h1 className="text-4xl font-bold text-white text-center">Memory Cards</h1>

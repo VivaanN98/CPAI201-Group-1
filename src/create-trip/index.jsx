@@ -58,9 +58,13 @@ function CreateTrip() {
       setOpenDailog(true)
       return;
     }
+    if(formData?.noOfDays < 1){
+      toast("Please enter a valid number of days")
+      return;
+    }
 
-    if (formData?.noOfDays > 5 && !formData?.location || !formData?.budget || !formData?.traveler) {
-      toast("Please fill all details")
+    if (!formData?.location || !formData?.budget || !formData?.traveler) {
+      toast("Please fill all details correctly")
       return;
     }
     setLoading(true);
