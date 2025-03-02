@@ -6,7 +6,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
-import { useNavigation } from 'react-router-dom';
+import { Router, useNavigation } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 
 import {
@@ -59,6 +59,10 @@ function Header() {
             <Button variant="outline" 
             className="rounded-full">Play Games</Button>
             </a>
+            <a href="http://localhost:8501">
+            <Button variant="outline" 
+            className="rounded-full">Have a Chat!</Button>
+            </a>
             <a href='/create-trip'>
             <Button variant="outline" 
             className="rounded-full">+ Create Trip</Button>
@@ -78,7 +82,7 @@ function Header() {
                 window.location.reload();
               }}>Logout</h2>
 
-              <h2 className='cursor-pointer p-2 hover:bg-[whitesmoke] border-b rounded-s'>Rewards</h2>
+<a href="/rewards"><h2 className='cursor-pointer p-2 hover:bg-[whitesmoke] border-b rounded-s'>Rewards</h2></a>
             </PopoverContent>
           </Popover>
           </div>
