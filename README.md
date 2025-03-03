@@ -42,7 +42,7 @@ The platform provides:
 To ensure **clarity and organization**, the repository is structured as follows:  
 
 ```
-📦 AI-Driven-Gamified-Travel-Advisor  
+📦 Tourly
 │── 📂 datasets             # Original and processed datasets  
 │── 📂 notebooks            # Jupyter Notebooks for EDA, model training  
 │── 📂 src                  # Source code for frontend and backend  
