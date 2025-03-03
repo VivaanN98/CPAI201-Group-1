@@ -99,7 +99,7 @@ pip install -r requirements.txt  # Installs backend dependencies
 #### **Step 3: Run the Application**  
 ```sh
 npm run dev  # Starts the frontend development server  
-python travelBot.py  # Runs the AI-powered chatbot  
+streamlit run travelBot.py  # Runs the AI-powered chatbot  
 ```
 
 ---
