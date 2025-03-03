@@ -32,6 +32,7 @@ The platform provides:
 | **Streamlit** | Interactive AI & data visualization |  
 | **JavaScript (Vite)** | Frontend logic and interactivity |  
 | **Tailwind CSS** | UI/UX styling and responsiveness |  
+| **Firebase** | Data storage and server management | 
 | **Vercel** | Deployment and hosting for frontend |  
 
 ---
