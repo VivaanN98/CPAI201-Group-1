@@ -120,7 +120,7 @@ This project serves as a foundation for a **real-world AI travel planning applic
 
 ---
  
-📍 GitHub Repository: [Your GitHub Link]  
+📍 GitHub Repository: [https://github.com/VivaanN98/CPAI201-Group-1]  
 
 For any issues or suggestions, please open a **GitHub issue** in this repository.  
 
