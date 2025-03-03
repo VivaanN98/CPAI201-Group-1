@@ -143,7 +143,6 @@ This project was developed as part of the **Year 2 CRS AI Capstone Project at Sa
 
 ## **📸 Screenshots & Demos**  
 
-*Include relevant screenshots showcasing the UI, chatbot, and travel recommendation system.*
 ![image](https://github.com/user-attachments/assets/81cec750-6aac-4d43-bd05-6f79dd4a2b37)
 ![image](https://github.com/user-attachments/assets/660a7cd0-0dc5-4519-862e-17ae95df6614)
 ![image](https://github.com/user-attachments/assets/0a110a2e-4521-4f27-a433-697230ab00c2)
