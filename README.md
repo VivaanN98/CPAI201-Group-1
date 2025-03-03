@@ -29,7 +29,7 @@ With features like **custom itinerary recommendations, travel challenges, real-t
 ## **📂 Project Structure**  
 
 ```
-📦 AI-Driven-Gamified-Travel-Advisor  
+📦 Tourly 
 │── 📂 public                # Public assets and static files  
 │── 📂 src                   # Source code files  
 │── 📜 .env.local            # Environment variable configuration  
